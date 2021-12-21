@@ -1,0 +1,19 @@
+
+#about {
+    
+}
+
+.about-content {
+	display: flex;
+	justify-content: space-between;
+    border-radius: 10px;
+	align-items: center;
+    background: var(--gradient-grey);
+    
+}
+
+.about-content p {
+	color: var(--white);
+	font-size: 1.1rem;
+    margin: 50px 10%
+}

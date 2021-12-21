@@ -1,9 +1,19 @@
 .section {
-  height: 100vh;
+	height: 100vh;
 }
 
 .content {
-width: 80%;
-min-height: calc(100vh - 125px);
-margin: 0 auto 110px;
+	width: 80%;
+	min-height: calc(100vh - 125px);
+	margin: 0 auto 110px;
+}
+
+.header {
+	font-size: 2rem;
+	font-weight: 900;
+	text-align: center;
+	color: var(--light);
+	margin: 50px auto;
+	letter-spacing: 1px;
+	grid-column: auto / span 3;
 }

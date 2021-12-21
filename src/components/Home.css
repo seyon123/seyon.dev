@@ -1,13 +1,12 @@
-#home {
-	width: 100%;
+.home {
 	min-height: 100vh;
 }
 
 .triangle {
-	width: 40%;
+	width: 35%;
 	position: absolute;
-    max-height: 100vh;
 	top: 50px;
+    min-height: 100%;
 	right: 0;
 }
 .content-inner {
