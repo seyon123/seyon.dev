@@ -5,6 +5,10 @@
 	justify-content: center;
 	align-items: center;
 	font-size: 1.2rem;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+
 }
 
 .navbar-logo {
@@ -58,6 +62,11 @@
     color: var(--white);
 	border-radius: 4px;
 	transition: all 0.2s ease-out;
+}
+
+.nav-links-active {
+	border-bottom: 3px solid var(--purple);
+	margin-bottom: -3px;
 }
 
 .fa-bars {

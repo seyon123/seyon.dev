@@ -1,0 +1,149 @@
+#home {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.triangle {
+	width: 40%;
+	position: absolute;
+    max-height: 100vh;
+	top: 50px;
+	right: 0;
+}
+.content-inner {
+    padding-top: 100px;
+	display: flex;
+	min-height: calc(100vh - 300px);
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+
+.description {
+	color: var(--head-light);
+	width: 50%;
+}
+
+.description > p{
+    font-size: 16px;
+}
+
+
+.description > h1 {
+    font-size: 2.7em;
+    font-weight: 900;
+    -webkit-transform: scale(1,.9);
+    -moz-transform: scale(1,.9);
+    -ms-transform: scale(1,.9);
+    -o-transform: scale(1,.9);
+    transform: scale(1,.9);
+    margin: -4px 0px;
+}
+
+.profile {
+	width: 150px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+.info {
+	font-size: 1.06rem;
+	text-transform: uppercase;
+}
+
+.social i {
+	color: var(--purple);
+	font-size: 27px !important;
+	border-radius: 50%;
+	padding: 7px;
+	transition: transform 300ms;
+}
+
+.social i:hover {
+	background: var(--icon-bg);
+	transform: scale(1.08);
+}
+
+.social {
+	display: flex;
+	padding-top: 20px;
+}
+
+.code {
+	width: 50%;
+	min-width: 50%;
+	position: relative;
+}
+
+.resume {
+	display: grid;
+	place-items: center;
+}
+
+.resumeBtn {
+	width: fit-content;
+	text-decoration: none;
+	color: var(--white);
+	font-size: 18px;
+	font-weight: bold;
+	padding: 20px;
+	background: var(--gradient);
+	border-radius: 50px;
+	transition: all 200ms ease;
+}
+
+.resumeBtn i {
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+.resumeBtn:hover {
+	transform: scale(1.1);
+}
+
+.class {
+	background: var(--grey);
+	padding: 30px 25px 35px;
+	border-radius: 10px;
+	min-height: 295px;
+	box-shadow: var(--shadow);
+    overflow-x: scroll;
+}
+
+.class p {
+	color: var(--light);
+	font-weight: 400;
+	font-size: 0.9rem;
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.8;
+}
+
+.class b {
+	font-weight: 700;
+}
+
+@media screen and (max-width: 850px) {
+    .description {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 30px;
+		margin-top: 10px;
+		width: 100%;
+	}
+	.content-inner {
+		justify-content: space-between;
+		flex-direction: column;
+		height: fit-content;
+	}
+	.code {
+		width: 95%;
+	}
+	.class p {
+		font-size: 0.9rem;
+	}
+    .triangle {
+        display: none;
+    }
+}

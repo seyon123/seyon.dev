@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./Header.css";
-import { Button } from './Button';
-import Dropdown from './Dropdown';
-import { Link } from 'react-router-dom';
+import { Button } from "./Button";
+import Dropdown from "./Dropdown";
+// import { Link as ExternalLink} from 'react-router-dom';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Header = () => {
 	const [click, setClick] = useState(false);
@@ -27,47 +28,50 @@ const Header = () => {
 		}
 	};
 
+	const scrollToTop = () => {
+		scroll.scrollToTop();
+	};
+
 	return (
 		<>
 			<nav className="navbar">
-				<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-					<img className='logo-img' src={ require('../assets/logo.gif')}/>
+				<Link to="/" className="navbar-logo" onClick={scrollToTop}>
+					<img className="logo-img" src={require("../assets/logo.gif")} />
 				</Link>
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"} />
 				</div>
 				<ul className={click ? "nav-menu active" : "nav-menu"}>
 					<li className="nav-item">
-						<Link to="/" className="nav-links" onClick={closeMobileMenu}>
+						<Link activeClass="nav-links-active" to="home" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							Home
 						</Link>
 					</li>
-					<li className="nav-item" >
-						<Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+					<li className="nav-item">
+						<Link activeClass="nav-links-active" to="about" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							About Me
 						</Link>
-						
 					</li>
-                    <li className="nav-item">
-						<Link to="/skills" className="nav-links" onClick={closeMobileMenu}>
+					<li className="nav-item">
+						<Link activeClass="nav-links-active" to="skills" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							Skills
 						</Link>
 					</li>
 					<li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-						<Link to="/projects" className="nav-links" onClick={closeMobileMenu}>
+						<Link activeClass="nav-links-active" to="/projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							Projects <i className="fas fa-caret-down" />
 						</Link>
-                        {dropdown && <Dropdown />}
+						{dropdown && <Dropdown />}
 					</li>
 					<li className="nav-item">
-						<Link to="/contact-me" className="nav-links" onClick={closeMobileMenu}>
+						<Link activeClass="nav-links-active" to="/contact-me" className="nav-links" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMobileMenu}>
 							Contact Me
 						</Link>
 					</li>
-                    <li className="nav-item">
-						<Link to="https://seyonrajagopal.ca/resume" className="nav-links" onClick={closeMobileMenu}>
+					<li className="nav-item">
+						<a href="https://seyonrajagopal.ca/resume" target="_blank" className="nav-links" onClick={closeMobileMenu}>
 							Resume
-						</Link>
+						</a>
 					</li>
 				</ul>
 				<Button />
