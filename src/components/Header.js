@@ -36,7 +36,7 @@ const Header = () => {
 		<>
 			<nav className="navbar">
 				<Link to="/" className="navbar-logo" onClick={scrollToTop}>
-					<img className="logo-img" src={require("../assets/logo.gif")} />
+					<img className="logo-img" src={require("../assets/logo.gif")} alt="logo"/>
 				</Link>
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -64,12 +64,12 @@ const Header = () => {
 						{dropdown && <Dropdown />}
 					</li>
 					<li className="nav-item">
-						<Link activeClass="nav-links-active" to="/contact-me" className="nav-links" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMobileMenu}>
+						<Link activeClass="nav-links-active" to="contact" className="nav-links" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMobileMenu}>
 							Contact Me
 						</Link>
 					</li>
 					<li className="nav-item">
-						<a href="https://seyonrajagopal.ca/resume" target="_blank" className="nav-links" onClick={closeMobileMenu}>
+						<a href="https://seyonrajagopal.ca/resume" target="_blank" rel="noreferrer" className="nav-links" onClick={closeMobileMenu}>
 							Resume
 						</a>
 					</li>

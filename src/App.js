@@ -1,11 +1,11 @@
 import "./App.css";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 function App() {
 	return (
@@ -21,6 +21,7 @@ function App() {
 							<Home />
 							<About />
 							<Skills />
+							<Contact/>
 						</div>
 					}
 				/>
