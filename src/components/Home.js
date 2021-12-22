@@ -40,7 +40,7 @@ function Home() {
 								typewriter
 									.pauseFor(1500)
 									.typeString(
-										"class Person {<br/>     constructor (name, traits, birthYear) {<br/>     this.name = name;<br/>     this.traits = traits;</br>     this.age = new Date().getFullYear() - birthYear;<br/>     }<br/>}<br/><br/>const Me = new Person( 'Seyon Rajagopal', ['Designer', 'Developer', 'Programmer'], 2000);"
+										"class <b>Person</b> {<br/>     constructor (name, traits, birthYear) {<br/>     this.name = name;<br/>     this.traits = traits;</br>     this.age = new Date().getFullYear() - birthYear;<br/>     }<br/>}<br/><br/>const Me = new Person( <b>'Seyon Rajagopal'</b>, [<b>'Designer'</b>, '<b>Developer</b>', '<b>Programmer</b>'], <b>2000</b>);"
 									)
 									.start();
 							}}
