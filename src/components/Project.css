@@ -1,12 +1,3 @@
-#projects {
-	position: relative;
-    padding-top: 50px;
-	
-	display: grid;
-	gap: 20px;
-	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-}
-
 .project-cover {
 	margin: 20px 0;
 }
@@ -85,7 +76,6 @@
 	text-align: center;
 	transition: all 200ms ease;
 	border-radius: 50%;
-
 }
 
 .project-links .github:hover {
@@ -103,7 +93,7 @@
 .img-container .img {
 	position: relative;
 	background: var(--skill-grey);
-    max-width: 100%;
+	max-width: 100%;
 	border-radius: 10px;
 	overflow: hidden;
 	background-repeat: no-repeat;
@@ -151,53 +141,32 @@
 	}
 }
 
-@media screen and (max-width: 1800px) {
-	#projects {
-		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-	}
-
-	#projects .header {
-		grid-column: auto / span 2;
-		margin-bottom: 0;
-	}
-}
-
-@media screen and (max-width: 1300px) {
-	#projects {
-		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-	}
-
-	#projects .header {
-		grid-column: auto / span 1;
-	}
-}
-
 @media screen and (max-width: 600px) {
 	.project-links {
 		flex-direction: column;
-        height: fit-content;
+		height: fit-content;
 	}
 
-    .btns {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+	.btns {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
 
-    .btns > a {
-        width: 100% !important;
-    }
+	.btns > a {
+		width: 100% !important;
+	}
 
 	.demo {
 		margin: 0 !important;
-        text-align: center;
+		text-align: center;
 	}
 
-    .github {
-        margin-top: 10px;
-        border-radius: 5px !important;
-    }
+	.github {
+		margin-top: 10px;
+		border-radius: 5px !important;
+	}
 
 	.languages {
 		margin: 20px;
