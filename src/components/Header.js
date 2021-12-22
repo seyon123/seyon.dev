@@ -58,7 +58,7 @@ const Header = () => {
 						</Link>
 					</li>
 					<li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-						<Link activeClass="nav-links-active" to="/projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
+						<Link activeClass="nav-links-active" to="projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							Projects <i className="fas fa-caret-down" />
 						</Link>
 						{dropdown && <Dropdown />}
