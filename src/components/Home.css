@@ -31,11 +31,6 @@
 .description > h1 {
     font-size: 2.7em;
     font-weight: 900;
-    -webkit-transform: scale(1,.9);
-    -moz-transform: scale(1,.9);
-    -ms-transform: scale(1,.9);
-    -o-transform: scale(1,.9);
-    transform: scale(1,.9);
     margin: -4px 0px;
 }
 
@@ -102,15 +97,17 @@
 
 .class {
 	background: var(--grey);
+	font-size: 1.1rem;
 	padding: 30px 25px 35px;
 	border-radius: 10px;
 	min-height: 295px;
 	box-shadow: var(--shadow);
     overflow-x: scroll;
+	color: var(--head-light);
 }
 
 .class p {
-	color: var(--light);
+	
 	font-weight: 400;
 	font-size: 0.9rem;
 	font-family: "Montserrat", sans-serif;

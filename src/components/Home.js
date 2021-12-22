@@ -1,5 +1,5 @@
 import React from "react";
-
+import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { ReactComponent as Triangle } from "../assets/triangle.svg";
 
@@ -29,16 +29,23 @@ function Home() {
 					</div>
 				</div>
 				<div className="code">
-					<pre id="typewriter" className="class">{`
-class Person {
-    constructor (name, traits, birthYear) {
-        this.name = name;
-        this.traits = traits;
-        this.age = new Date().getFullYear() - birthYear;
-    }
-}
-
-const Me = new Person( 'Seyon Rajagopal', ['Designer', 'Developer', 'Programmer'], 2000);  `}</pre>
+					<pre id="typewriter" className="class">
+						<Typewriter
+							options={{
+								autoStart: true,
+								loop: false,
+								delay: 25,
+							}}
+							onInit={(typewriter) => {
+								typewriter
+									.pauseFor(1500)
+									.typeString(
+										"class Person {<br/>     constructor (name, traits, birthYear) {<br/>     this.name = name;<br/>     this.traits = traits;</br>     this.age = new Date().getFullYear() - birthYear;<br/>     }<br/>}<br/><br/>const Me = new Person( 'Seyon Rajagopal', ['Designer', 'Developer', 'Programmer'], 2000);"
+									)
+									.start();
+							}}
+						/>
+					</pre>
 				</div>
 			</div>
 			<div className="resume">
