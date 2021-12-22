@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Button } from "./Button";
 import Dropdown from "./Dropdown";
-// import { Link as ExternalLink} from 'react-router-dom';
+import { Link as ExternalLink} from 'react-router-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Header = () => {
@@ -35,9 +35,9 @@ const Header = () => {
 	return (
 		<>
 			<nav className="navbar">
-				<Link to="/" className="navbar-logo" onClick={scrollToTop}>
+				<ExternalLink to="/" className="navbar-logo" onClick={scrollToTop}>
 					<img className="logo-img" src={require("../assets/logo.gif")} alt="logo"/>
-				</Link>
+				</ExternalLink>
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"} />
 				</div>

@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
-import Project from "./components/Project";
+import Projects from "./components/Projects";
 
 function App() {
 	return (
@@ -22,13 +22,13 @@ function App() {
 							<Home />
 							<About />
 							<Skills />
-							<Project/>
+							<Projects/>
 							<Contact/>
 							
 						</div>
 					}
 				/>
-				<Route path="*" element={<>Oops Looks like this page is empty try a different page!</>} />
+				<Route path="*" element={<div className="content">Oops Looks like this page is empty try a different page!</div>} />
 			</Routes>
 
 			<Footer />
