@@ -53,6 +53,8 @@
 .nav-links {
 	color: var(--light);
 	text-decoration: none;
+	border: 2px solid transparent;
+	border-radius: 4px;
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 }
@@ -60,7 +62,7 @@
 .nav-links:hover {
 	background-color: var(--theme);
 	color: var(--white);
-	border-radius: 4px;
+	border: 2px solid var(--theme);
 	transition: all 0.2s ease-out;
 }
 
@@ -69,18 +71,14 @@
 	text-align: center;
 	border-radius: 4px;
 	background: var(--theme);
+	border: 2px solid var(--theme);
+	transition: all 0.3s ease-out;
 	text-decoration: none;
 	color: var(--white);
 }
 
 .nav-links-mobile:hover {
-	transition: all 0.3s ease-out;
 	background-color: transparent;
-	color: var(--light);
-	border-radius: 4px;
-	margin: -2px !important;
-	border: 2px solid var(--theme);
-	transition: all 0.3s ease-out;
 }
 
 .nav-links-active {
