@@ -3,12 +3,12 @@ import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { ReactComponent as Triangle } from "../assets/triangle.svg";
 import { Link } from "react-router-dom";
-import { Helment } from "react-helmet";
+import { Helmet } from "react-helmet";
 
 function Home() {
 	return (
 		<section id="home" className="home">
-			<Helment>
+			<Helmet>
 				<meta charSet="utf-8" />
 				<link rel="canonical" href="https://seyon.dev/"/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,7 +35,7 @@ function Home() {
 					content="Hello! My name is Seyon Rajagopal, and I am a Computer Science Co-op student at Ryerson University. I build, design and develop websites and applications."
 				/>
 				<meta property="twitter:image" content="https://seyon.dev/pic-background.jpg" />
-			</Helment>
+			</Helmet>
 			<Triangle alt="triangle" className="triangle" />
 			<div className="content-inner">
 				<div className="description">
