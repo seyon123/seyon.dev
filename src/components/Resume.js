@@ -18,10 +18,13 @@ function Resume() {
 		<div id="resume">
 			<Helmet>
 				<meta charSet="utf-8" />
+				<link rel="canonical" href="https://seyon.dev/resume" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="theme-color" content="#8148eb" />
 
-                <title>Seyon Rajagopal | Resume</title>
-                <meta name="description" content="Take a look at my Resume!" />
-                
+				<title>Seyon Rajagopal | Resume</title>
+				<meta name="description" content="Take a look at my Resume!" />
+
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://seyon.dev/" />
 				<meta property="og:title" content="Seyon Rajagopal | Resume" />
