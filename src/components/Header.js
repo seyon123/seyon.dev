@@ -59,9 +59,9 @@ const Header = () => {
 					</li>
 					<li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 						<Link activeClass="nav-links-active" to="projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
-							Projects <i className="fas fa-caret-down" />
+							Projects {/* {<i className="fas fa-caret-down" />} */}
 						</Link>
-						{dropdown && <Dropdown />}
+						{/* {dropdown && <Dropdown />} */}
 					</li>
 					<li className="nav-item">
 						<Link activeClass="nav-links-active" to="contact" className="nav-links" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMobileMenu}>
