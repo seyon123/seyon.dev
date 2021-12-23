@@ -11,7 +11,7 @@ export default function HelmetMetaData(props) {
 		props.description !== undefined
 			? props.description
 			: "Hello! My name is Seyon Rajagopal, and I am a Computer Science Co-op student at Ryerson University. I build, design and develop websites and applications.";	return (
-		<Helmet>
+		<Helmet prioritizeSeoTags>
 			<title>{title}</title>
             <link rel="canonical" href={currentUrl}/>
 			<meta charset="utf-8" />

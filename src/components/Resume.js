@@ -5,7 +5,6 @@ import HelmetMetaData from "./HelmetMetaData";
 
 function Resume() {
 	useEffect(() => {
-		document.title = "Seyon Rajagopal | Resu";
 		const viewSDKClient = new ViewSDKClient();
 		viewSDKClient.ready().then(() => {
 			viewSDKClient.previewFile("resume", {
