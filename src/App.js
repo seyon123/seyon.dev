@@ -1,5 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -13,6 +15,7 @@ import Resume from "./components/Resume";
 function App() {
 	return (
 		<Router>
+			<ReactNotification className="notifications"/>
 			<Routes>
 				<Route
 					path="/"

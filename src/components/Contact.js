@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { send } from "emailjs-com";
+import { store } from "react-notifications-component";
 
 import "./Contact.css";
 
@@ -18,13 +19,39 @@ function Contact() {
 		e.preventDefault();
 		send("service_nq4pp57", "template_ky2cg6m", toSend, "user_cx3dl6sXJhwenXLXsHpRz")
 			.then((response) => {
-				console.log("SUCCESS!", response.status, response.text);
+				store.addNotification({
+					title: "Email Sent Successfully",
+					message: "Your Message has been sent! I will get back to you as soon as possible.",
+					type: "success",
+					insert: "top",
+					container: "top-right",
+					animationIn: ["animate__animated", "animate__fadeIn"],
+					animationOut: ["animate__animated", "animate__fadeOut"],
+					dismiss: {
+						pauseOnHover: true,
+						duration: 5000,
+						onScreen: true,
+					},
+				})
                 setToSend({name: "",
                 email: "",
                 message: "",});
 			})
 			.catch((err) => {
-				console.log("FAILED...", err);
+				store.addNotification({
+					title: "Error Sending Email",
+					message: "Sorry, there was an error sending your message. Please try again later.",
+					type: "error",
+					insert: "top",
+					container: "top-right",
+					animationIn: ["animate__animated", "animate__fadeIn"],
+					animationOut: ["animate__animated", "animate__fadeOut"],
+					dismiss: {
+						pauseOnHover: true,
+						duration: 5000,
+						onScreen: true,
+					},
+				})
 			});
 	};
 

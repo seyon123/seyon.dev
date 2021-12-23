@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import ViewSDKClient from "./ViewSDKClient";
 import "./Resume.css";
-import HelmetMetaData from "./HelmetMetaData";
 
 function Resume() {
 	useEffect(() => {
@@ -15,7 +14,6 @@ function Resume() {
 	});
 	return (
 		<div id="resume">
-            <HelmetMetaData title="Seyon Rajagopal | Resume" description="Take a look at my Resume!"/>
 		</div>
 	);
 }

@@ -3,12 +3,10 @@ import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { ReactComponent as Triangle } from "../assets/triangle.svg";
 import { Link } from "react-router-dom";
-import HelmetMetaData from "./HelmetMetaData";
 
 function Home() {
 	return (
 		<section id="home" className="home">
-			<HelmetMetaData title="Seyon Rajagopal | Portfolio"/>
 			<Triangle alt="triangle" className="triangle" />
 			<div className="content-inner">
 				<div className="description">
