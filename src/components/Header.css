@@ -8,24 +8,23 @@
 	position: fixed;
 	width: 100%;
 	z-index: 5;
-
 }
 
 .navbar-logo {
 	color: var(--light);
-    height: max-content;
+	height: max-content;
 	justify-self: start;
 	cursor: pointer;
-    height: 70px;
-    width: 70px;
-    border-radius: 10px;
+	height: 70px;
+	width: 70px;
+	border-radius: 10px;
 	text-decoration: none;
-    background-color: var(--logo-bg);
+	background-color: var(--logo-bg);
 }
 
 .logo-img {
-    height: 70px;
-    width: 70px;
+	height: 70px;
+	width: 70px;
 }
 
 .fa-firstdraft {
@@ -35,7 +34,7 @@
 
 .nav-menu {
 	display: grid;
-	grid-template-columns: repeat(6, auto);
+	grid-template-columns: repeat(7, auto);
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
@@ -48,7 +47,7 @@
 	display: flex;
 	align-items: center;
 	height: 80px;
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 .nav-links {
@@ -60,22 +59,37 @@
 
 .nav-links:hover {
 	background-color: var(--purple);
-    color: var(--white);
+	color: var(--white);
 	border-radius: 4px;
 	transition: all 0.2s ease-out;
 }
 
+.nav-links-mobile {
+	display: block;
+	text-align: center;
+	border-radius: 4px;
+	background: var(--theme);
+	text-decoration: none;
+	color: var(--white);
+}
+
+.nav-links-mobile:hover {
+	transition: all 0.3s ease-out;
+	background-color: transparent;
+	color: var(--light);
+	border-radius: 4px;
+	margin: -2px !important;
+	border: 2px solid var(--theme);
+	transition: all 0.3s ease-out;
+}
+
 .nav-links-active {
-	border-bottom: 3px solid var(--purple);
+	border-bottom: 3px solid var(--theme);
 	margin-bottom: -3px;
 }
 
 .fa-bars {
 	color: var(--light);
-}
-
-.nav-links-mobile {
-	display: none;
 }
 
 .menu-icon {
@@ -93,6 +107,7 @@
 		width: 100%;
 		height: 90vh;
 		position: absolute;
+		justify-content: center;
 		top: 80px;
 		left: -100%;
 		opacity: 1;
@@ -104,7 +119,7 @@
 		left: 0;
 		opacity: 1;
 		transition: all 0.5s ease;
-        margin-bottom: 30px;
+		margin-bottom: 30px;
 		z-index: 1;
 	}
 
@@ -115,14 +130,14 @@
 		display: table;
 	}
 
-    .nav-links:last-child {
-        margin-bottom: 100px;
-    }
+	.nav-links:last-child {
+		margin-bottom: 10px;
+	}
 
 	.nav-links:hover {
 		background-color: var(--purple);
 		border-radius: 0;
-        color: var(--white);
+		color: var(--white);
 	}
 
 	.btn {
@@ -148,23 +163,9 @@
 	}
 
 	.nav-links-mobile {
-		display: block;
-		text-align: center;
 		padding: 1.5rem;
 		margin: 2rem auto;
-		border-radius: 4px;
 		width: 80%;
-		background: var(--purple);
-		text-decoration: none;
-		color: var(--white);
 		font-size: 1.5rem;
 	}
-
-	.nav-links-mobile:hover {
-		background: var(--light);
-		color: var(--purple);
-		transition: 250ms;
-	}
-
-	
 }

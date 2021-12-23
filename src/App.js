@@ -7,31 +7,32 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
+import Resume from "./components/Resume";
 
 function App() {
 	return (
 		<Router>
-			<Header />
-
 			<Routes>
 				<Route
 					path="/"
 					exact
 					element={
-						<div className="content">
-							<Home />
-							<About />
-							<Skills />
-							<Projects/>
-							<Contact/>
-							
-						</div>
+						<>
+							<Header />
+							<div className="content">
+								<Home />
+								<About />
+								<Skills />
+								<Projects />
+								<Contact />
+							</div>
+							<Footer />
+						</>
 					}
 				/>
-				<Route path="*" element={<div className="content">Oops Looks like this page is empty try a different page!</div>} />
+				<Route path="/resume" element={<Resume />} />
+				<Route path="*" element={<div className=""> Oops Looks like this page is empty try a different page! </div>} />
 			</Routes>
-
-			<Footer />
 		</Router>
 	);
 }

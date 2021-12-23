@@ -69,10 +69,10 @@ const Header = () => {
 						</Link>
 					</li>
 					<li className="nav-item">
-						<a href="https://seyonrajagopal.ca/resume" target="_blank" rel="noreferrer" className="nav-links" onClick={closeMobileMenu}>
+						<ExternalLink to="/resume" className="nav-links nav-links-mobile" onClick={closeMobileMenu}>
 							Resume
-						</a>
-					</li>
+						</ExternalLink>
+					</li> 
 				</ul>
 				<Button />
 			</nav>

@@ -2,8 +2,10 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { ReactComponent as Triangle } from "../assets/triangle.svg";
+import { Link } from "react-router-dom";
 
 function Home() {
+
 	return (
 		<section id="home" className="home">
 			<Triangle alt="triangle" className="triangle" />
@@ -48,10 +50,11 @@ function Home() {
 					</pre>
 				</div>
 			</div>
+
 			<div className="resume">
-				<a className="resumeBtn" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+				<Link to="/resume" className="resumeBtn">
 					<i className="far fa-file-pdf"></i> View Resume
-				</a>
+				</Link>
 			</div>
 		</section>
 	);

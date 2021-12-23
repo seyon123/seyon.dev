@@ -1,22 +1,22 @@
 export const MenuItems = [
 	{
 		title: "Project 1",
-		path: "/marketing",
+		path: "/dropdown1",
 		cName: "dropdown-link",
 	},
 	{
 		title: "Project 2",
-		path: "/consulting",
+		path: "/dropdown2",
 		cName: "dropdown-link",
 	},
 	{
 		title: "Project 3",
-		path: "/design",
+		path: "/dropdown3",
 		cName: "dropdown-link",
 	},
 	{
 		title: "Project 4",
-		path: "/development",
+		path: "/dropdown4",
 		cName: "dropdown-link",
 	},
 ];
