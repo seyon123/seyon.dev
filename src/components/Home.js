@@ -3,39 +3,12 @@ import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { ReactComponent as Triangle } from "../assets/triangle.svg";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import HelmetMetaData from "./HelmetMetaData";
 
 function Home() {
 	return (
 		<section id="home" className="home">
-			<Helmet>
-				<meta charSet="utf-8" />
-				<link rel="canonical" href="https://seyon.dev/"/>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="theme-color" content="#8148eb" />
-
-				<title>Seyon Rajagopal | Portfolio</title>
-				<meta name="description" content="Hello! My name is Seyon Rajagopal, and I am a Computer Science Co-op student at Ryerson University. I build, design and develop websites and applications." />
-
-				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://seyon.dev/" />
-				<meta property="og:title" content="Seyon Rajagopal | Portfolio" />
-				<meta
-					property="og:description"
-					content="Hello! My name is Seyon Rajagopal, and I am a Computer Science Co-op student at Ryerson University. I build, design and develop websites and applications."
-				/>
-				<meta property="og:image" content="https://seyon.dev/pic-background.jpg" />
-				<meta property="og:site_name" content="Seyon Rajagopal" />
-				
-				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://seyon.dev/" />
-				<meta property="twitter:title" content="Seyon Rajagopal | Portfolio" />
-				<meta
-					property="twitter:description"
-					content="Hello! My name is Seyon Rajagopal, and I am a Computer Science Co-op student at Ryerson University. I build, design and develop websites and applications."
-				/>
-				<meta property="twitter:image" content="https://seyon.dev/pic-background.jpg" />
-			</Helmet>
+			<HelmetMetaData title="Seyon Rajagopal | Portfolio"/>
 			<Triangle alt="triangle" className="triangle" />
 			<div className="content-inner">
 				<div className="description">
