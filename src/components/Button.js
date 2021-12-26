@@ -35,7 +35,7 @@ export function Button() {
 
 	return (
 		<button onClick={changeTheme} className="btn">
-			{theme ? <i className="fas fa-sun" /> : <i className="fas fa-moon" />}
+			{theme ? <i className="fas fa-moon" /> : <i className="fas fa-sun" />}
 		</button>
 	);
 }

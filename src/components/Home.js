@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { ReactComponent as Triangle } from "../assets/triangle.svg";
 import { Link } from "react-router-dom";
 
 function Home() {
+	useEffect(() => {
+		document.title = "Portfolio - Seyon Rajagopal";
+	});
 	return (
 		<section id="home" className="home">
 			<Triangle alt="triangle" className="triangle" />
