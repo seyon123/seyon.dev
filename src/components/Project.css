@@ -55,32 +55,34 @@
 .project-links .demo {
 	color: var(--white);
 	font-size: 1rem;
-	background-color: var(--theme);
+	background-color: var(--purple);
 	text-decoration: none;
 	padding: 13px;
 	border-radius: 5px;
-	border: solid 2px var(--theme);
+	border: solid 2px var(--purple);
 	transition: background-color 200ms ease-in-out; 
 	margin-right: 10px;
 }
 
 .project-links .demo:hover {
 	background: none;
+	color: var(--light);
 }
 
 .project-links .github {
 	color: var(--white);
 	font-size: 20px;
-	background-color: var(--theme);
+	background-color: var(--purple);
 	padding: 11px 13px;
 	text-align: center;
 	border-radius: 50%;
-	border: solid 2px var(--theme);
+	border: solid 2px var(--purple);
 	transition: background-color 200ms ease-in-out; 
 }
 
 .project-links .github:hover {
 	background: none;
+	color: var(--light);
 }
 
 .img-container {

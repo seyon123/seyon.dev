@@ -59,10 +59,15 @@
 	cursor: pointer;
 }
 
+.nav-link {
+	text-decoration: none;
+	color: var(--light);
+}
+
 .nav-links:hover {
-	background-color: var(--theme);
+	background-color: var(--purple);
 	color: var(--white);
-	border: 2px solid var(--theme);
+	border: 2px solid var(--purple);
 	transition: all 0.2s ease-out;
 }
 
@@ -70,8 +75,8 @@
 	display: block;
 	text-align: center;
 	border-radius: 4px;
-	background: var(--theme);
-	border: 2px solid var(--theme);
+	background: var(--purple);
+	border: 2px solid var(--purple);
 	transition: all 0.3s ease-out;
 	text-decoration: none;
 	color: var(--white);
@@ -79,10 +84,11 @@
 
 .nav-links-mobile:hover {
 	background-color: transparent;
+	color: var(--light);
 }
 
 .nav-links-active {
-	border-bottom: 3px solid var(--theme);
+	border-bottom: 3px solid var(--purple);
 	margin-bottom: -3px;
 }
 
@@ -135,7 +141,6 @@
 	.nav-links:hover {
 		background-color: var(--purple);
 		border-radius: 0;
-		color: var(--white);
 	}
 
 	.btn {
