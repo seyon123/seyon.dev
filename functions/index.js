@@ -1,61 +1,41 @@
 const functions = require("firebase-functions");
-const express = require("express");
-const path = require("path");
-const fs = require("fs").promises;
+const admin = require("firebase-admin");
+const fs = require("fs");
 
-const app = express();
+admin.initializeApp();
 
-app.get("/", async (req, res) => {
-	const filePath = path.resolve(__dirname, "./build", "index.html");
+// Getting and replacing meta tags
+exports.preRender = functions.https.onRequest((request, response) => {
+	// Getting the path
+	const path = request.path ? request.path.split("/") : request.path;
+	console.log(path);
+
 	try {
-		let data = await fs.readFile(filePath, "utf-8");
+		// Getting index.html text
+		let index = fs.readFileSync("./index.html").toString();
 
-		data = data
-			.replace(/__TITLE__/g, "Portfolio - Seyon Rajagopal")
-			.replace(/__URL__/g, "https://seyon.dev/")
-			.replace(/__DESCRIPTION__/g, "Hello! My name is Seyon Rajagopal, and I am a Computer Science Co-op student at Ryerson University. I build, design and develop websites and applications.");
+		// Changing metas function
+		const setMetas = (title, description, url) => {
+			index = index
+				.replace(/__TITLE__/g, title)
+				.replace(/__DESCRIPTION__/g, description)
+				.replace(/__URL__/g, url);
+		};
 
-		res.send(data);
+		// Navigation menu
+		if (path[1] === "resume") setMetas("Resume - Seyon Rajagopal", "Hello! My name is Seyon Rajagopal. View My Resume!", "https://seyon.dev/resume");
+		else if (path[1] === "404") setMetas("404 - Seyon Rajagopal", "This page does not exist!", "https://seyon.dev/404");
+		else if (path[1] === "")
+			setMetas(
+				"Portfolio - Seyon Rajagopal",
+				"Hello! My name is Seyon Rajagopal, and I am a Computer Science Co-op student at Ryerson University. I build, design and develop websites and applications.",
+				"https://seyon.dev/"
+			);
+
+		// Sending index.html
+		response.status(200).send(index);
 	} catch (error) {
 		console.log(error);
-		res.sendStatus(500);
+		response.sendStatus(500);
 	}
 });
-
-app.get("/resume", async (req, res) => {
-	const filePath = path.resolve(__dirname, "./build", "index.html");
-	try {
-		let data = await fs.readFile(filePath, "utf-8");
-		
-		data = data
-			.replace(/__TITLE__/g, "Resume - Seyon Rajagopal")
-			.replace(/__URL__/g, "https://seyon.dev/resume")
-			.replace(/__DESCRIPTION__/g, "Hello! My name is Seyon Rajagopal. View My Resume!");
-
-		res.send(data);
-	} catch (error) {
-		console.log(error);
-		res.sendStatus(500);
-	}
-});
-
-app.get("/404", async (req, res) => {
-	const filePath = path.resolve(__dirname, "./build", "index.html");
-	try {
-		let data = await fs.readFile(filePath, "utf-8");
-		
-		data = data
-			.replace(/__TITLE__/g, "404 - Seyon Rajagopal")
-			.replace(/__URL__/g, "https://seyon.dev/404")
-			.replace(/__DESCRIPTION__/g, "This page does not exist.");
-
-		res.send(data);
-	} catch (error) {
-		console.log(error);
-		res.sendStatus(500);
-	}
-});
-
-app.use(express.static(path.resolve(__dirname, "./build")));
-
-exports.preRender = functions.https.onRequest(app);
