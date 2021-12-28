@@ -5,7 +5,7 @@ import App from "./App";
 import { store } from "react-notifications-component";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
-ReactDOM.render(
+ReactDOM.hydrate(
 	<React.StrictMode>
 		<App />
 	</React.StrictMode>,

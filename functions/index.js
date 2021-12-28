@@ -33,6 +33,7 @@ exports.preRender = functions.https.onRequest((request, response) => {
 			);
 
 		// Sending index.html
+        response.set('Cache-Control', 'no-cache');
 		response.status(200).send(index);
 	} catch (error) {
 		console.log(error);
