@@ -6,9 +6,6 @@ var app = admin.initializeApp();
 
 // Getting and replacing meta tags
 exports.preRender = functions.https.onRequest((request, response) => {
-    
-    // Error 404 is false by default
-    let error404 = false;
         
     // Getting the path
     const path = request.path ? request.path.split('/') : request.path;
@@ -20,9 +17,9 @@ exports.preRender = functions.https.onRequest((request, response) => {
     // Changing metas function
     const setMetas = (title, description, url) => {
         
-        index = index.replace('__TITLE__', title);
-        index = index.replace('__DESCRIPTION__', description);
-        index = index.replace('__URL__', url);
+        index = index.replace(/__TITLE__/g, title);
+        index = index.replace(/__DESCRIPTION__/g, description);
+        index = index.replace(/__URL__/g, url);
         
     }
     
@@ -33,8 +30,6 @@ exports.preRender = functions.https.onRequest((request, response) => {
 
     
     // Sending index.html    
-    error404
-    ? response.status(400).send(index)
-    : response.status(200).send(index);
+    response.status(200).send(index);
     
 });
