@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ViewSDKClient from "./ViewSDKClient";
+import MetaTags from "./MetaTags";
 import "./Resume.css";
 
 function Resume() {
@@ -15,6 +16,7 @@ function Resume() {
 	});
 	return (
 		<div id="resume">
+			<MetaTags title="Resume - Seyon Rajagopal" description="Hello! My name is Seyon Rajagopal. View My Resume!"/>
 		</div>
 	);
 }

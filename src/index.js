@@ -3,12 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { store } from "react-notifications-component";
+import { HelmetProvider } from "react-helmet-async";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
+	<HelmetProvider>
+		<React.StrictMode>
+			<App />
+		</React.StrictMode>
+	</HelmetProvider>,
 	document.getElementById("root")
 );
 
@@ -26,7 +29,7 @@ serviceWorkerRegistration.register({
 						container: "top-right",
 						animationIn: ["animate__animated", "animate__fadeIn"],
 						animationOut: ["animate__animated", "animate__fadeOut"],
-					})
+					});
 				}
 			});
 			waitingServiceWorker.postMessage({ type: "SKIP_WAITING" });

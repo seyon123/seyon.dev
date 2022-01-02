@@ -13,7 +13,7 @@ const Header = () => {
 	let navigate = useNavigate();
 
 	const handleClick = () => setClick(!click);
-	const closeMobileMenu = (scrollPos) => () => {
+	const closeMobileMenu = () => {
 		if (location.pathname !== "/") {
 			navigate("/");
 		}
@@ -51,33 +51,33 @@ const Header = () => {
 				</div>
 				<ul className={click ? "nav-menu active" : "nav-menu"}>
 					<li className="nav-item">
-						<Link activeClass="nav-links-active" to="home" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu("home")}>
+						<Link activeClass="nav-links-active" to="home" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							Home
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link activeClass="nav-links-active" to="about" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu("about")}>
+						<Link activeClass="nav-links-active" to="about" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							About Me
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link activeClass="nav-links-active" to="skills" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu("skills")}>
+						<Link activeClass="nav-links-active" to="skills" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							Skills
 						</Link>
 					</li>
 					<li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-						<Link activeClass="nav-links-active" to="projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu("projects")}>
+						<Link activeClass="nav-links-active" to="projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-links" onClick={closeMobileMenu}>
 							Projects {/* {<i className="fas fa-caret-down" />} */}
 						</Link>
 						{dropdown && <Dropdown />}
 					</li>
 					<li className="nav-item">
-						<Link activeClass="nav-links-active" to="contact" className="nav-links" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMobileMenu("contact")}>
+						<Link activeClass="nav-links-active" to="contact" className="nav-links" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMobileMenu}>
 							Contact Me
 						</Link>
 					</li>
 					<li className="nav-item">
-						<ExternalLink to="/resume" className="nav-links nav-links-mobile" onClick={closeMobileMenu("")}>
+						<ExternalLink to="/resume" className="nav-links nav-links-mobile" onClick={closeMobileMenu}>
 							Resume
 						</ExternalLink>
 					</li>

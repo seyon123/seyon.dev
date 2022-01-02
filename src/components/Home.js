@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { ReactComponent as Triangle } from "../assets/triangle.svg";
 import { Link } from "react-router-dom";
+import MetaTags from "./MetaTags";
 
 function Home() {
 	useEffect(() => {
@@ -10,6 +11,7 @@ function Home() {
 	});
 	return (
 		<section id="home" className="home">
+			<MetaTags title="Portfolio - Seyon Rajagopal"/>
 			<Triangle alt="triangle" className="triangle" />
 			<div className="content-inner">
 				<div className="description">
