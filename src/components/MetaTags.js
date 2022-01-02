@@ -14,13 +14,6 @@ export default function MetaTags(props) {
 		<Helmet prioritizeSeoTags>
 			<title>{title}</title>
             <link rel="canonical" href={currentUrl}/>
-			<meta charset="utf-8" />
-			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-			
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-			<meta name="msapplication-TileColor" content="#8148eb" />
-			<meta name="msapplication-TileImage" content="/logo.gif" />
-			<meta name="theme-color" content="#8148eb" />
 			
             <meta property="title" content={title} />
 			<meta name="description" content={description} />
