@@ -6,4 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (<Layout><Component {...pageProps} /></Layout>)
 }
 
+export function reportWebVitals(metric) {
+  console.log(metric)
+}
+
 export default MyApp
