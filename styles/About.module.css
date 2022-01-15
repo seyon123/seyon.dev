@@ -1,0 +1,16 @@
+.about {
+    padding-top: 50px;
+}
+
+.about-content {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	align-items: center;
+	background: var(--gradient-grey);
+}
+
+.about-content p {
+	color: var(--white);
+	margin: 50px 10%;
+}

@@ -1,0 +1,28 @@
+.btn {
+	cursor: pointer;
+	padding: 8px 10px;
+	border-radius: 4px;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	color: var(--white);
+	cursor: pointer;
+	border: 2px solid var(--purple);
+	background-color: var(--purple);
+	transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+	background-color: transparent;
+	color: var(--light);
+}
+
+@media screen and (max-width: 1065px) {
+    .btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-50%, 50%);
+	}
+}
+
