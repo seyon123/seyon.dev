@@ -31,7 +31,7 @@ const Project = ({ name, info, image, demoLink, githubLink, languages }) => {
 					</div>
 				</div>
 				<div className={styles["img-container"]}>
-					<Image className={styles.img} width={1920} height={1080} alt={image} src={`/assets/projects/${image}`}/>
+					<Image className={styles.img} placeholder="blur" blurDataURL={`/assets/projects/${image}`} width="1920" height="1080" alt={image} src={`/assets/projects/${image}`}/>
 				</div>
 			</div>
 		</div>
