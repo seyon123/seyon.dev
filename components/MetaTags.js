@@ -5,7 +5,7 @@ const MetaTags = (props) => {
 	let router = useRouter();
 	let currentUrl = "https://seyon.dev" + router.asPath;
 	let title = props.title !== undefined ? props.title : "Seyon Rajagopal";
-	let image = props.image !== undefined ? props.image : "https://seyon.dev/pic-background.jpg";
+	let image = props.image !== undefined ? props.image : "/assets/pic-background.jpg";
 	let description =
 		props.description !== undefined
 			? props.description
