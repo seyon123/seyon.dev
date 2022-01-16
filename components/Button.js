@@ -34,7 +34,7 @@ const Button = () => {
     }, [theme]);
 
 	return (
-		<button onClick={changeTheme} className={styles.btn}>
+		<button onClick={changeTheme} className={styles.btn} aria-label="Change Theme">
 			{theme ? <i className="fas fa-moon" /> : <i className="fas fa-sun" />}
 		</button>
 	);

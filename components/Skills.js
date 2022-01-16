@@ -5,12 +5,12 @@ const Skills = () => {
 		<section id="skills" className={styles.skills}>
 			<h2 className={`header ${styles["header"]}`}>My Skills</h2>
 			<div className={styles["skills-icons"]}>
-				<i className={`fab fa-react ${styles["skill-icon"]} ${styles.fab}`}></i>
-				<i className={`fab fa-html5 ${styles["skill-icon"]} ${styles.fab}`}></i>
-				<i className={`fab fa-css3 ${styles["skill-icon"]} ${styles.fab}`}></i>
-				<i className={`fab fa-js ${styles["skill-icon"]} ${styles.fab}`}></i>
-				<i className={`fab fa-java ${styles["skill-icon"]} ${styles.fab}`}></i>
-				<i className={`fab fa-python ${styles["skill-icon"]} ${styles.fab}`}></i>
+				<i className={`fab fa-react ${styles["skill-icon"]} ${styles.fab}`} title="React JS"></i>
+				<i className={`fab fa-html5 ${styles["skill-icon"]} ${styles.fab}`} title="HTML5"></i>
+				<i className={`fab fa-css3 ${styles["skill-icon"]} ${styles.fab}`} title="CSS3"></i>
+				<i className={`fab fa-js ${styles["skill-icon"]} ${styles.fab}`} title="Javascript"></i>
+				<i className={`fab fa-java ${styles["skill-icon"]} ${styles.fab}`} title="Java"></i>
+				<i className={`fab fa-python ${styles["skill-icon"]} ${styles.fab}`} title="Python"></i>
 			</div>
 			<div className={styles["skills-bg-text"]}>
 				<div className={styles["skills-bg-text-inner"]}>
