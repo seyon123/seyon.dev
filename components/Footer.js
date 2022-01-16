@@ -4,13 +4,13 @@ const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.social}>
-				<a href="http://github.com/seyon123" target="_blank" aria-label="Github" rel="noopener">
+				<a href="http://github.com/seyon123" target="_blank" aria-label="Github" rel="noopener noreferrer">
 					<i className="fab fa-github"></i>
 				</a>
-				<a href="http://instagram.com/seyon100" target="_blank" aria-label="Instagram" rel="noopener">
+				<a href="http://instagram.com/seyon100" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
 					<i className="fab fa-instagram"></i>
 				</a>
-				<a href="https://www.linkedin.com/in/seyon-rajagopal/" target="_blank" aria-label="Linkedin" rel="noopener">
+				<a href="https://www.linkedin.com/in/seyon-rajagopal/" target="_blank" aria-label="Linkedin" rel="noopener noreferrer">
 					<i className="fab fa-linkedin"></i>
 				</a>
 				<a href="mailto:hello@seyon.dev" aria-label="Mail hello@seyon.dev">

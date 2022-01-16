@@ -12,13 +12,13 @@ const Project = ({ name, info, image, demoLink, githubLink, languages }) => {
 						<div className={styles["project-links"]}>
 							<div className={styles.btns}>
 								{demoLink ? (
-									<a href={demoLink} className={styles.demo} target="_blank" aria-label="View Live Demo" rel="noopener">
+									<a href={demoLink} className={styles.demo} target="_blank" aria-label="View Live Demo" rel="noopener noreferrer">
 										Live Demo
 									</a>
 								) : (
 									""
 								)}
-								<a href={githubLink} target="_blank" className={styles.github} aria-label="View Source Code" rel="noopener">
+								<a href={githubLink} target="_blank" className={styles.github} aria-label="View Source Code" rel="noopener noreferrer">
 									<i className="fab fa-github"></i>
 								</a>
 							</div>
