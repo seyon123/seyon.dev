@@ -1,7 +1,7 @@
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
 
-export default async (req, res) => {
+export default async function Sitemap(req, res) {
 	// An array with your links
 	const links = [
 		{ url: "/", changefreq: "weekly", priority: 0.5 },
