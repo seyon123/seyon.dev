@@ -6,6 +6,7 @@ export default async function Sitemap(req, res) {
 	const links = [
 		{ url: "/", changefreq: "weekly", priority: 0.5 },
 		{ url: "/resume", changefreq: "weekly", priority: 0.5 },
+        { url: "/projects", changefreq: "weekly", priority: 0.5 },
 	];
 
 	// Create a stream to write to
