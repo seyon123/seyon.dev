@@ -52,7 +52,7 @@ const Profile = () => {
 
 			<div className={styles.resume}>
 				<Link href="/resume" >
-					<a className={styles.resumeBtn}><i className="far fa-file-pdf"/>View Resume</a>
+					<a className={styles.resumeBtn}><i className="far fa-file-pdf"/>&nbsp;View Resume</a>
 				</Link>
 			</div>
 		</section>

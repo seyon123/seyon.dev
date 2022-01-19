@@ -1,7 +1,7 @@
 import styles from "../styles/Project.module.css";
 import Image from "next/image";
 
-const Project = ({ name, info, image, demoLink, githubLink, languages }) => {
+const Project = ({ name, info, image, demoLink, githubLink, languages, languagesAlt }) => {
 	return (
 		<div key={name} className={styles["project-cover"]}>
 			<div className={styles.project}>
@@ -24,7 +24,7 @@ const Project = ({ name, info, image, demoLink, githubLink, languages }) => {
 							</div>
 							<div className={styles.languages}>
 								{languages.map((language, i) => (
-									<i key={i} className={`fab ${language}`}></i>
+									<i key={i} title={languagesAlt[i]} className={`fab ${language}`}></i>
 								))}
 							</div>
 						</div>
