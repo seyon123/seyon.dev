@@ -50,28 +50,28 @@ const Header = () => {
 			</div>
 			<ul className={click ? (`${styles["nav-menu"]} ${styles.active}`): styles["nav-menu"]}>
 				<li className={styles["nav-item"]}>
-					<ScrollLink activeClass={styles["nav-links-active"]} to="home" spy={true} smooth={true} offset={-100} duration={1000} className={styles["nav-links"]} onClick={closeMobileMenu}>
+					<ScrollLink activeClass={styles["nav-links-active"]} to="home" spy={true} smooth={true} offset={-80} duration={1000} className={styles["nav-links"]} onClick={closeMobileMenu}>
 						Home
 					</ScrollLink>
 				</li>
 				<li className={styles["nav-item"]}>
-					<ScrollLink activeClass={styles["nav-links-active"]} to="about" spy={true} smooth={true} offset={-100} duration={1000}className={styles["nav-links"]} onClick={closeMobileMenu}>
+					<ScrollLink activeClass={styles["nav-links-active"]} to="about" spy={true} smooth={true} offset={-30} duration={1000}className={styles["nav-links"]} onClick={closeMobileMenu}>
 						About Me
 					</ScrollLink>
 				</li>
 				<li className={styles["nav-item"]}>
-					<ScrollLink activeClass={styles["nav-links-active"]} to="skills" spy={true} smooth={true} offset={-100} duration={1000} className={styles["nav-links"]} onClick={closeMobileMenu}>
+					<ScrollLink activeClass={styles["nav-links-active"]} to="skills" spy={true} smooth={true} offset={-30} duration={1000} className={styles["nav-links"]} onClick={closeMobileMenu}>
 						Skills
 					</ScrollLink>
 				</li>
 				<li className={styles["nav-item"]} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-					<ScrollLink activeClass={styles["nav-links-active"]} to="projects" spy={true} smooth={true} offset={-100} duration={1000} className={styles["nav-links"]} onClick={closeMobileMenu}>
+					<ScrollLink activeClass={styles["nav-links-active"]} to="projects" spy={true} smooth={true} offset={-30} duration={1000} className={styles["nav-links"]} onClick={closeMobileMenu}>
 						Projects {/* {<i className="fas fa-caret-down" />} */}
 					</ScrollLink>
 					{dropdown && <Dropdown />}
 				</li>
 				<li className={styles["nav-item"]}>
-					<ScrollLink activeClass={styles["nav-links-active"]} to="contact" className={styles["nav-links"]} spy={true} smooth={true} offset={-100} duration={1000} onClick={closeMobileMenu}>
+					<ScrollLink activeClass={styles["nav-links-active"]} to="contact" className={styles["nav-links"]} spy={true} smooth={true} offset={-30} duration={1000} onClick={closeMobileMenu}>
 						Contact Me
 					</ScrollLink>
 				</li>

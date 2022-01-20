@@ -33,7 +33,8 @@
 .project-info p {
 	line-height: 1.7;
 	min-height: 250px;
-	margin-right: 10px;
+	margin-right: 5px;
+	display: inline
 }
 
 .project-info p a {
@@ -44,6 +45,7 @@
 
 .project-info p a:hover {
 	text-decoration: underline;
+	color: var(--purple);
 }
 
 .project-links {
@@ -86,21 +88,31 @@
 }
 
 .img-container {
-	position: relative;
-	right: -20px;
+	position: relative;;
 	grid-column: 2 / 4;
 	grid-row: 1 / auto;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	border-radius: 10px;
+	
+}
+
+.img-container:hover {
+	z-index: 1;
+	transform: scale(1.05);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.7);
 }
 
 .img-container .img {
 	position: relative;
 	background: var(--skill-grey);
 	max-width: 100%;
-	border-radius: 10px;
 	overflow: hidden;
 	background-repeat: no-repeat;
 	background-size: cover;
+	border-radius: 10px;
 }
+
 
 .languages {
 	color: var(--purple);
