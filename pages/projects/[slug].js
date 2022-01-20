@@ -6,10 +6,6 @@ import styles from "../../styles/ProjectItem.module.css";
 
 
 export default function ProjectDetails({ projectItem }) {
-	const router = useRouter();
-
-	console.log(projectItem);
-
 	return (
 		<div className={styles.content}>
 			<MetaTags title={`${projectItem.name} - Seyon Rajagopal`} description={projectItem.infoAlt} image={`/assets/projects/${projectItem.image}`} />
