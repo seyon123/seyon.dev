@@ -1,25 +1,56 @@
 {
-  "short_name": "Seyon Rajagopal",
-  "name": "Seyon Rajagopal",
-  "icons": [
-    {
-      "src": "logo.gif",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo.gif",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo.gif",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "minimal-ui",
-  "theme_color": "#8148eb",
-  "background_color": "#232323"
+	"short_name": "Seyon Rajagopal",
+	"name": "Seyon Rajagopal",
+	"icons": [
+		{
+			"src": "assets/icons/icon-48x48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-72x72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-128x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-144x144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-152x152.png",
+			"sizes": "152x152",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-284x284.png",
+			"sizes": "284x284",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"scope": "./",
+	"start_url": "./",
+	"display": "minimal-ui",
+	"theme_color": "#8148eb",
+	"background_color": "#232323"
 }

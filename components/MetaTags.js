@@ -14,9 +14,11 @@ const MetaTags = (props) => {
 			<title>{title}</title>
             <link rel="canonical" href={currentUrl}/>
 			<meta name="theme-color" content="#8148eb" />
-			<link rel="shortcut icon" href="/assets/logo.gif" type="image/x-icon" />
-			<link rel="icon" href="/assets/logo.gif" type="image/x-icon" />
-			<link rel="apple-touch-icon" href="/assets/logo.gif" />
+			<link rel="shortcut icon" href="/assets/icons/icon-512x512.png" type="image/x-icon" />
+			<link rel="icon" href="/assets/icons/icon-512x512.png" type="image/x-icon" />
+			<link rel="apple-touch-icon" href="/assets/icons/icon-512x512.png" />
+			<meta name="theme-color" content="#8148eb" />
+			<link rel="manifest" href="/manifest.json" />
 			
             <meta property="title" content={title} />
 			<meta name="description" content={description} />
