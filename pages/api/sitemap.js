@@ -1,22 +1,53 @@
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
+import axios from "axios";
 
 export default async function Sitemap(req, res) {
-	// An array with your links
-	const links = [
-		{ url: "/", changefreq: "weekly", priority: 0.5 },
-		{ url: "/resume", changefreq: "weekly", priority: 0.5 },
-        { url: "/projects", changefreq: "weekly", priority: 0.5 },
-	];
+	try {
+		const links = [];
+		const pages = ["/", "/resume", "/projects"];
+		pages.map((url) => {
+			links.push({
+				url,
+				changefreq: "daily",
+				priority: 0.9,
+			});
+		});
 
-	// Create a stream to write to
-	const stream = new SitemapStream({ hostname: `https://${req.headers.host}` });
+		const projectSlugs = await getProjectSlugs();
 
-	res.writeHead(200, {
-		"Content-Type": "application/xml",
+		projectSlugs.map((path) => {
+			console.log(path);
+			links.push({
+				url: `/projects/${path}`,
+				changefreq: "daily",
+				priority: 0.9,
+			});
+		});
+
+		const stream = new SitemapStream({ hostname: `https://${req.headers.host}` });
+
+		res.writeHead(200, {
+			"Content-Type": "application/xml",
+		});
+
+		const xmlString = await streamToPromise(Readable.from(links).pipe(stream)).then((data) => data.toString());
+
+		res.end(xmlString);
+	} catch (err) {
+		console.log(err);
+		res.send(JSON.stringify(err));
+	}
+}
+
+async function getProjectSlugs() {
+	let url = `https://seyon123.github.io/jsons/seyon-dev/projects-all.json`;
+	let paths = [];
+
+	const { data } = await axios.get(url);
+	paths = data.map((project) => {
+		return  project.webName;
 	});
 
-	const xmlString = await streamToPromise(Readable.from(links).pipe(stream)).then((data) => data.toString());
-
-	res.end(xmlString);
-};
+	return paths;
+}
