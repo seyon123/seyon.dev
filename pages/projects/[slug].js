@@ -19,13 +19,13 @@ export default function ProjectDetails({ projectItem }) {
 							<div className={styles["project-links"]}>
 								<div className={styles.btns}>
 									{projectItem.demoLink ? (
-										<a href={projectItem.demoLink} className={styles.demo} target="_blank" aria-label="View Live Demo" rel="noopener noreferrer">
+										<a href={projectItem.demoLink} className={styles.demo} aria-label="View Live Demo">
 											Live Demo
 										</a>
 									) : (
 										""
 									)}
-									<a href={projectItem.githubLink} target="_blank" className={styles.github} aria-label="View Source Code" rel="noopener noreferrer">
+									<a href={projectItem.githubLink} className={styles.github} aria-label="View Source Code">
 										<i className="fab fa-github"></i>
 									</a>
 								</div>

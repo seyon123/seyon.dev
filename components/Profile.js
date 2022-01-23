@@ -1,34 +1,43 @@
-import styles from '../styles/Profile.module.css'
+import styles from "../styles/Profile.module.css";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import MetaTags from "./MetaTags";
 const Profile = () => {
 	return (
 		<section id="home" className={styles.home}>
-			<MetaTags title="Portfolio - Seyon Rajagopal"/>
-			<img src="/assets/triangle.svg" alt="triangle" className={styles.triangle} />
+			<MetaTags title="Portfolio - Seyon Rajagopal" />
+
 			<div className={styles["content-inner"]}>
 				<div className={styles.description}>
-					<Image placeholder="blur" blurDataURL="/assets/profiles_seyon-min.jpg" src="/assets/profiles_seyon-min.jpg" width={150} height={150} alt="Seyon Rajagopal Profile" className={styles.profile} />
+					<Image
+						placeholder="blur"
+						blurDataURL="/assets/profiles_seyon-min.jpg"
+						src="/assets/profiles_seyon-min.jpg"
+						width={150}
+						height={150}
+						alt="Seyon Rajagopal Profile"
+						className={styles.profile}
+					/>
 					<p>Hello, I&apos;m</p>
 					<h1>SEYON RAJAGOPAL</h1>
 					<p className={styles.info}>Web Designer, Developer and Programmer</p>
 					<div className={styles.social}>
-						<a href="http://github.com/seyon123" target="_blank" aria-label="Github" rel="noopener noreferrer">
+						<a href="http://github.com/seyon123" aria-label="Github">
 							<i className="fab fa-github"></i>
 						</a>
-						<a href="http://instagram.com/seyon100" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+						<a href="http://instagram.com/seyon100" aria-label="Instagram">
 							<i className="fab fa-instagram"></i>
 						</a>
-						<a href="https://www.linkedin.com/in/seyon-rajagopal/" target="_blank" aria-label="Linkedin" rel="noopener noreferrer">
+						<a href="https://www.linkedin.com/in/seyon-rajagopal/" aria-label="Linkedin">
 							<i className="fab fa-linkedin"></i>
 						</a>
-						<a href="mailto:hello@seyon.dev" aria-label="Mail hello@seyon.dev">
+						<a href="mailto:hello@seyon.dev" aria-label="email hello@seyon.dev">
 							<i className="fas fa-envelope"></i>
 						</a>
 					</div>
 				</div>
+				<img src="/assets/triangle.svg" alt="triangle" className={styles.triangle} />
 				<div className={styles.code}>
 					<pre id="typewriter" className={styles.class}>
 						<Typewriter
@@ -51,8 +60,11 @@ const Profile = () => {
 			</div>
 
 			<div className={styles.resume}>
-				<Link href="/resume" >
-					<a className={styles.resumeBtn}><i className="far fa-file-pdf"/>&nbsp;View Resume</a>
+				<Link href="/resume">
+					<a className={styles.resumeBtn}>
+						<i className="far fa-file-pdf" />
+						&nbsp;View Resume
+					</a>
 				</Link>
 			</div>
 		</section>

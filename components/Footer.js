@@ -4,13 +4,13 @@ const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.social}>
-				<a href="http://github.com/seyon123" target="_blank" aria-label="Github" rel="noopener noreferrer">
+				<a href="http://github.com/seyon123" aria-label="Github">
 					<i className="fab fa-github"></i>
 				</a>
-				<a href="http://instagram.com/seyon100" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+				<a href="http://instagram.com/seyon100" aria-label="Instagram">
 					<i className="fab fa-instagram"></i>
 				</a>
-				<a href="https://www.linkedin.com/in/seyon-rajagopal/" target="_blank" aria-label="Linkedin" rel="noopener noreferrer">
+				<a href="https://www.linkedin.com/in/seyon-rajagopal/" aria-label="Linkedin">
 					<i className="fab fa-linkedin"></i>
 				</a>
 				<a href="mailto:hello@seyon.dev" aria-label="Mail hello@seyon.dev">
@@ -18,13 +18,9 @@ const Footer = () => {
 				</a>
 			</div>
 			<p>
-				Made with ❤ by
-				<a href="https://github.com/seyon123" target="_blank" rel="noopener noreferrer">
-					{" "}
-					Seyon Rajagopal{" "}
-				</a>
+				Built with <a href="https://nextjs.org">Next.js</a>, <a href="https://reactjs.org/">React</a> and <a href="https://vercel.com">Vercel</a>.		
 				<br />
-				Copyright © 2022 Seyon Rajagopal
+				Seyon Rajagopal © 2022
 			</p>
 		</footer>
 	);

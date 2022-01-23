@@ -13,13 +13,13 @@ const Project = ({ name, webName, info, image, demoLink, githubLink, languages, 
 						<div className={styles["project-links"]}>
 							<div className={styles.btns}>
 								{demoLink ? (
-									<a href={demoLink} className={styles.demo} target="_blank" aria-label="View Live Demo" rel="noopener noreferrer">
+									<a href={demoLink} className={styles.demo} aria-label="View Live Demo">
 										Live Demo
 									</a>
 								) : (
 									""
 								)}
-								<a href={githubLink} target="_blank" className={styles.github} aria-label="View Source Code" rel="noopener noreferrer">
+								<a href={githubLink} className={styles.github} aria-label="View Source Code">
 									<i className="fab fa-github"></i>
 								</a>
 							</div>
@@ -34,7 +34,8 @@ const Project = ({ name, webName, info, image, demoLink, githubLink, languages, 
 				<div className={styles["img-container"]}>
 					<Link href={`/projects/${webName}`} passHref>
 						<a>
-						<Image className={styles.img} placeholder="blur" blurDataURL={`/assets/projects/${image}`} width="1920" height="1080" alt={image} src={`/assets/projects/${image}`} /></a>
+						<Image className={styles.img} placeholder="blur" blurDataURL={`/assets/projects/${image}`} width="1920" height="1080" alt={image} src={`/assets/projects/${image}`} />
+						</a>
 					</Link>
 				</div>
 			</div>
