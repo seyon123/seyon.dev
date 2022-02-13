@@ -1,6 +1,8 @@
+import fs from "fs";
+import path from "path";
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
-import axios from "axios";
+
 
 export default async function Sitemap(req, res) {
 	try {
@@ -41,12 +43,16 @@ export default async function Sitemap(req, res) {
 }
 
 async function getProjectSlugs() {
-	let url = `https://seyon123.github.io/jsons/seyon-dev/projects-all.json`;
-	let paths = [];
 
-	const { data } = await axios.get(url);
-	paths = data.map((project) => {
-		return  project.webName;
+	let paths = []
+
+	const files = fs.readdirSync(path.join("projects"));
+
+	// Get slug from projects
+	paths = files.map((filename) => {
+		// Create slug
+		const slug = filename.replace(".md", "");
+		return slug
 	});
 
 	return paths;
