@@ -10,7 +10,11 @@
   "dependencies": {
     "axios": "^0.24.0",
     "emailjs-com": "^3.2.0",
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.12",
     "next": "12.0.9",
+    "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-notifications-component": "^3.1.0",

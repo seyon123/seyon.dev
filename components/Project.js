@@ -9,7 +9,10 @@ const Project = ({ name, webName, info, image, demoLink, githubLink, languages, 
 				<div className={styles["info-bg"]}>
 					<div className={styles["project-info"]}>
 						<h2>{name}</h2>
-						<p dangerouslySetInnerHTML={{ __html: info }}></p><p><Link href={`/projects/${webName}`}>See More Info...</Link></p>
+						<p dangerouslySetInnerHTML={{ __html: info }}></p>
+						<p>
+							<Link href={`/projects/${webName}`}>See More Info...</Link>
+						</p>
 						<div className={styles["project-links"]}>
 							<div className={styles.btns}>
 								{demoLink ? (
@@ -34,7 +37,7 @@ const Project = ({ name, webName, info, image, demoLink, githubLink, languages, 
 				<div className={styles["img-container"]}>
 					<Link href={`/projects/${webName}`} passHref>
 						<a>
-						<Image className={styles.img} placeholder="blur" blurDataURL={`/assets/projects/${image}`} width="1920" height="1080" alt={image} src={`/assets/projects/${image}`} />
+							<Image className={styles.img} placeholder="blur" blurDataURL={image} width="1920" height="1080" alt={name} src={image} />
 						</a>
 					</Link>
 				</div>

@@ -21,6 +21,7 @@
 .info-bg {
 	background: var(--grey);
 	box-shadow: var(--shadow);
+	margin-bottom: 20px;
 	min-height: 350px;
 	padding: 50px;
 	border-radius: 10px;
@@ -59,7 +60,6 @@
 .project-links {
 	display: flex;
 	align-items: center;
-	margin: 20px 0 0;
 }
 
 .project-links .demo {
