@@ -18,9 +18,9 @@ const Footer = () => {
 				</a>
 			</div>
 			<p>
-				Built with <a href="https://nextjs.org">Next.js</a>, <a href="https://reactjs.org/">React</a> and <a href="https://vercel.com">Vercel</a>.		
+				Built with <a href="https://nextjs.org">Next.js</a> and <a href="https://reactjs.org/">React</a>.
 				<br />
-				Seyon Rajagopal © 2022
+				Seyon Rajagopal © 2023
 			</p>
 		</footer>
 	);
